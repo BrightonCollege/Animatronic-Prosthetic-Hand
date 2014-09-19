@@ -34,6 +34,8 @@ void setup() {
     Middle_Finger_Servo.attach(6);
     Ring_Finger_Servo.attach(10);
     Pinky_Finger_Servo.attach(11);
+    // Setup Bluetooth serial line
+    Serial.begin(9600); // Baud = 9600 bps
 }
 
 void loop() {
