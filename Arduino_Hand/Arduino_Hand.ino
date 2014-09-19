@@ -28,11 +28,12 @@ int Pinky_Finger = 4;
 
 void setup() {
     // Attach servos
-    Thumb_Finger_Servo.attach(3)
-    First_Finger_Servo.attach(5)
-    Middle_Finger_Serco.attach(6)
-    Ring_Finger_Servo.attach(10)
-    Pinky_Finger_Servo.attach(11)
+    // Remember that Servos MUST be attched to pwm pins (marked with a ~)
+    Thumb_Finger_Servo.attach(3);
+    First_Finger_Servo.attach(5);
+    Middle_Finger_Servo.attach(6);
+    Ring_Finger_Servo.attach(10);
+    Pinky_Finger_Servo.attach(11);
 }
 
 void loop() {
