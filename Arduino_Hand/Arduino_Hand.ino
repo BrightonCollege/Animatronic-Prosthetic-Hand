@@ -18,6 +18,7 @@ Servo Middle_Finger_Servo;
 Servo Ring_Finger_Servo;
 Servo Pinky_Finger_Servo;
 
+const int Baud = 9600;
 int IncomingByte = 0;
 
 int Thumb_Finger = 0;
@@ -35,7 +36,7 @@ void setup() {
     Ring_Finger_Servo.attach(10);
     Pinky_Finger_Servo.attach(11);
     // Setup Bluetooth serial line
-    Serial.begin(9600); // Baud = 9600 bps
+    Serial.begin(Baud); // Baud = 9600 bps
 }
 
 void loop() {
