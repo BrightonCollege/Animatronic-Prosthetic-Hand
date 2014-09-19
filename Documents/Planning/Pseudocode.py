@@ -25,3 +25,10 @@ def doGesture(Gesture):
         changePosition(Middle_Finger, 0)
         changePosition(Ring_Finger, 180)
         changePosition(Pinky_Finger, 180)
+
+def initPosition():
+    changePosition(Thumb_Finger, 0)
+    changePosition(First_Finger, 0)
+    changePosition(Middle_Finger, 0)
+    changePosition(Ring_Finger, 0)
+    changePosition(Pinky_Finger, 0)
