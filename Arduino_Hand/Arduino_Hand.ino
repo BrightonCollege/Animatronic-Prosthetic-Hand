@@ -9,7 +9,8 @@
 //
 // //
 
-void setup() {
+#include <Servo.h>
+
 // Initalise Servo Objects
 Servo Thumb_Finger_Servo;
 Servo First_Finger_Servo;
