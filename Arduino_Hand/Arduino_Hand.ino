@@ -18,6 +18,12 @@ Servo Middle_Finger_Servo;
 Servo Ring_Finger_Servo;
 Servo Pinky_Finger_Servo;
 
+int Thumb_Finger = 0;
+int First_Finger = 1;
+int Middle_Finger = 2;
+int Ring_Finger = 3;
+int Pinky_Finger = 4;
+
 void setup() {
     // Attach servos
     Thumb_Finger_Servo.attach(3)
