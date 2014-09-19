@@ -5,7 +5,7 @@
 // //
 //
 // File to be transfured to the Arduino.
-// Collects Midi input and outputs to the servos
+// Collects Bluetooth input and outputs to the servos
 //
 // //
 
