@@ -18,6 +18,8 @@ Servo Middle_Finger_Servo;
 Servo Ring_Finger_Servo;
 Servo Pinky_Finger_Servo;
 
+int IncomingByte = 0;
+
 int Thumb_Finger = 0;
 int First_Finger = 1;
 int Middle_Finger = 2;
