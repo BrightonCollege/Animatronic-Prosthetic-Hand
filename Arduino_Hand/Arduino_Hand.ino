@@ -39,5 +39,23 @@ void setup() {
 }
 
 void loop() {
-
+    // Note: Could do with some verification of incoming data.
+    // Only run if there is data in the buffer
+    if (Serial.available() > 0){ 
+        // Only run if there is the connection signal
+        if (Serial.read() == 255) {
+            IncomingByte = Serial.read();
+            if (IncomingByte == Thumb_Finger) {
+                Thumb_Finger_Servo.write(Serial.read());
+            } else if (IncomingByte == First_Finger) {
+                First_Finger_Servo.write(Serial.read());
+            } else if (IncomingByte == Middle_Finger) {
+                Middle_Finger_Servo.write(Serial.read());
+            } else if (IncomingByte == Ring_Finger) {
+                Ring_Finger_Servo.write(Serial.read());
+            } else if (IncomingByte == Pinky_Finger) {
+                Pinky_Finger_Servo.write(Serial.read());
+            }
+         }
+    }
 }
