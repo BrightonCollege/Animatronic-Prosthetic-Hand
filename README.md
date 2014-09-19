@@ -5,15 +5,15 @@ Animatronic-Prosthetic-Hand
 
 A project using Arduino to control a robotic hand though a bluetooth connection with a mobile device.
 
-Current Progress:
+Current Progress and Todo List:
+=============
 - Made GitHub Repository
 - Assigned Jobs
 
-Todo:
 
-Components:
 
-Hardware
+Components and Hardware:
+-------------
 
 -   Servos *(In kits)*
 -   Tubing *(Harry's ordering)*
@@ -21,6 +21,7 @@ Hardware
 -   Plastics *(From DT?)*
 
 Software
+-------------
 
 Arduino Code
 
