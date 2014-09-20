@@ -59,6 +59,9 @@ void loop() {
                 Pinky_Finger_Servo.write(Serial.read());
             FingerByte = Serial.read();
             AngleByte = Serial.read();
+            // Correction
+            if (AngleByte == 0) {AngleByte = 1;}
+            if (AngleByte == 180) {AngleByte = 179;}
             }
          }
     }
