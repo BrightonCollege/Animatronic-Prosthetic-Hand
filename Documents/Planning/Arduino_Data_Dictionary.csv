@@ -9,5 +9,7 @@ Const,First_Finger,Object,Servo,
 Const,Middle_Finger,Object,Servo,
 Const,Ring_Finger,Object,Servo,
 Const,Pinky_Finger,Object,Servo,
-Variable,IncomingByte,Integer,0,Used to store incoming data that requires selection
+Variable,FingerByte,Integer,0,Used to store the incoming finger data
+Variable,AngleByte,Integer,0,Used to store the incoming angle data
 Const,Baud,Integer,9600,Data transmission rate in b/s
+

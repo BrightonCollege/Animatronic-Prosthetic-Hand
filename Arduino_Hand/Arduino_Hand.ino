@@ -19,7 +19,8 @@ Servo Ring_Finger_Servo;
 Servo Pinky_Finger_Servo;
 
 const int Baud = 9600;
-int IncomingByte = 0;
+int FingerByte = 0;
+int AngleByte = 0;
 
 int Thumb_Finger = 0;
 int First_Finger = 1;
@@ -56,6 +57,8 @@ void loop() {
                 Ring_Finger_Servo.write(Serial.read());
             } else if (IncomingByte == Pinky_Finger) {
                 Pinky_Finger_Servo.write(Serial.read());
+            FingerByte = Serial.read();
+            AngleByte = Serial.read();
             }
          }
     }
