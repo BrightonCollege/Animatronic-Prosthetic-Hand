@@ -62,6 +62,9 @@ void loop() {
             // Correction
             if (AngleByte == 0) {AngleByte = 1;}
             if (AngleByte == 180) {AngleByte = 179;}
+            // Verification
+            if (0 <= FingerByte || FingerByte < 5) {
+                if (0 <= Angle || Angle < 180) {
             }
          }
     }
