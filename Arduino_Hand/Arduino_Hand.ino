@@ -41,7 +41,6 @@ void setup() {
 }
 
 void loop() {
-    // Note: Could do with some verification of incoming data.
     // Only run if there is data in the buffer
     if (Serial.available() > 0){ 
         // Only run if there is the connection signal
