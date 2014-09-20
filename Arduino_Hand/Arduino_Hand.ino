@@ -46,17 +46,6 @@ void loop() {
     if (Serial.available() > 0){ 
         // Only run if there is the connection signal
         if (Serial.read() == 255) {
-            IncomingByte = Serial.read();
-            if (IncomingByte == Thumb_Finger) {
-                Thumb_Finger_Servo.write(Serial.read());
-            } else if (IncomingByte == First_Finger) {
-                First_Finger_Servo.write(Serial.read());
-            } else if (IncomingByte == Middle_Finger) {
-                Middle_Finger_Servo.write(Serial.read());
-            } else if (IncomingByte == Ring_Finger) {
-                Ring_Finger_Servo.write(Serial.read());
-            } else if (IncomingByte == Pinky_Finger) {
-                Pinky_Finger_Servo.write(Serial.read());
             FingerByte = Serial.read();
             AngleByte = Serial.read();
             // Correction
@@ -65,7 +54,24 @@ void loop() {
             // Verification
             if (0 <= FingerByte || FingerByte < 5) {
                 if (0 <= Angle || Angle < 180) {
+                    // Selection
+                    if (FingerByte == Thumb_Finger) {
+                        Thumb_Finger_Servo.write(AngleByte);
+                        
+                    } else if (FingerByte == First_Finger) {
+                        First_Finger_Servo.write(AngleByte);
+                        
+                    } else if (FingerByte == Middle_Finger) {
+                        Middle_Finger_Servo.write(AngleByte);
+                        
+                    } else if (FingerByte == Ring_Finger) {
+                        Ring_Finger_Servo.write(AngleByte);
+                        
+                    } else if (FingerByte == Pinky_Finger) {
+                        Pinky_Finger_Servo.write(AngleByte);
+                    }
+                }
             }
-         }
+        }
     }
 }
