@@ -110,8 +110,3 @@ void loop() {
     
   }
 }
-
-/*int Angle(int Byte) {
-  int Angle = map(Byte, 97, 122, 1, 179);
-  return Angle;
-}*/ // moved to top as #define, should reduce runtime resources cosumption
