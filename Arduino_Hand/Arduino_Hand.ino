@@ -4,84 +4,152 @@
 
 // //
 //
-// File to be transfured to the Arduino.
+// File to be transferred to the Arduino.
 // Collects Bluetooth input and outputs to the servos
 //
 // //
 
+/***********************************************************************************************
+ * Changelog: 2014-09-22T23:45Z by Adrian Lam                                                  *
+ * Attempted cleaning up and optimizations                                                     *
+ * not sure whether they work though, so original codes in comments rather than removed        *
+ * A copy of the updated known-to-work code is renamed Arduino_Hand.ino.old                    *
+ * Previous known-to-work codes are also available on GitHub history                           *
+ * Please test changes. If they work, feel free to removed commented codes                     *
+ ***********************************************************************************************/
+
 #include <Servo.h>
 
+#define angle(Byte) map(Byte, 'a', 'z', 1, 179) // TODO: rename "Byte" to not use uppercase
+
+/****************************************************************
+ * Question: Use byte or uint8_t datatypes instead of int?      *
+ ****************************************************************/
+
 // Servo Setup
-Servo Thumb_Finger_Servo;
-Servo Index_Finger_Servo;
-Servo Middle_Finger_Servo;
-Servo Ring_Finger_Servo;
-Servo Pinky_Finger_Servo;
+/*Servo thumb_servo;
+Servo index_servo;
+Servo middle_servo;
+Servo ring_servo;
+Servo pinky_servo;*/
+Servo fingers_servo[5];
+
+const char FINGERS_NAME[][7] = { "Thumb", "Index", "Middle", "Ring", "Pinky" };
+/* not sure if char[][] works but it should reduce resource consumption.
+   if doesn't work, switch to String[].*/
 
 
 // Communication Constants and Variables
-const int Start_Byte = 'S';
-const int Thumb_Finger_Byte = '0';
-const int Index_Finger_Byte = '1';
-const int Middle_Finger_Byte = '2';
-const int Ring_Finger_Byte = '3';
-const int Pinky_Finger_Byte = '4';
-const int Baud = 9600;
-int RX_Finger_Byte = 0;
-int RX_Angle_Byte = 0;
+/* consts renamed with UPPERCASE to conform to coding style */
+const int START_BYTE  = 'S';
+/*const int THUMB_BYTE  = '0';
+const int INDEX_BYTE  = '1';
+const int MIDDLE_BYTE = '2';
+const int RING_BYTE   = '3';
+const int PINKY_BYTE  = '4';*/ // not necessary with current approach, but may keep if needed elsewhere
+const int BAUD        = 9600;
+/*int RX_Finger_Byte = 0;
+int RX_Angle_Byte = 0;*/ // moved to loop() as scope does not need to be global
 
 void setup() {
   // Attach Servos
   // Remember they can only be attached on PWM pins, marked with a "~"
-  Thumb_Finger_Servo.attach(3);
-  Index_Finger_Servo.attach(5);
-  Middle_Finger_Servo.attach(6);
-  Ring_Finger_Servo.attach(10);
-  Pinky_Finger_Servo.attach(11);
+  /*thumb_servo.attach(3);
+  index_servo.attach(5);
+  middle_servo.attach(6);
+  ring_servo.attach(10);
+  pinky_servo.attach(11);*/
+  const int PINS[] = { 3, 5, 6, 10, 11 };
+  int i;
+  for(i=0; i<5; i++) {
+    fingers_servo[i].attach(PINS[i]);
+  }
   
   // Setup Bluetooth serial line
-  Serial.begin(Baud); // Baud = 9600 bps
+  Serial.begin(BAUD); // Baud = 9600 bps
   
   // Initalise Servo Positions
-  Thumb_Finger_Servo.write(1);
+  for(i=0; i<5; i++) {
+    fingers_servo[i].write(1);
+  } // Question: can this loop be merged to the previous loop?
+  
+  /*Thumb_Finger_Servo.write(1);
   Index_Finger_Servo.write(1);
   Middle_Finger_Servo.write(1);
   Ring_Finger_Servo.write(1);
-  Pinky_Finger_Servo.write(1);
+  Pinky_Finger_Servo.write(1);*/
 }
 
 void loop() {
+  int start_byte;
+  int RX_finger_byte = 0;
+  int RX_angle_byte = 0;
+  /*************************************************************************
+   * Question: any significance in using capitals for RX?                  *
+   * If not, should change to lower case to conform to coding style.       *
+   *************************************************************************/
   // Only run if there is data in the buffer
   if (Serial.available() >= 3) {
+    start_byte = Serial.read();
+    RX_finger_byte = Serial.read();
+    RX_angle_byte = Serial.read();
     
-      RX_Finger_Byte = Serial.read();
-      RX_Angle_Byte = Serial.read();
-      // Verification
-      // Selection
-      if (RX_Finger_Byte == Thumb_Finger_Byte) {
-        Thumb_Finger_Servo.write(Angle(RX_Angle_Byte));
-        Serial.println("Thumb Moved");
-        
-      } else if (RX_Finger_Byte == Index_Finger_Byte) {
-        Index_Finger_Servo.write(Angle(RX_Angle_Byte));
-        Serial.println("Index Moved");
-        
-      } else if (RX_Finger_Byte == Middle_Finger_Byte) {
-        Middle_Finger_Servo.write(Angle(RX_Angle_Byte));
-        Serial.println("Middle Moved");
-        
-      } else if (RX_Finger_Byte == Ring_Finger_Byte) {
-        Ring_Finger_Servo.write(Angle(RX_Angle_Byte));
-        Serial.println("Ring Moved");
-        
-      } else if (RX_Finger_Byte == Pinky_Finger_Byte) {
-        Pinky_Finger_Servo.write(Angle(RX_Angle_Byte));
-        Serial.println("Pinky Moved");
-      }
+    if(start_byte != START_BYTE) { // looks confusing, TODO: rename start_byte
+      // TODO: handle error!
+      return;
     }
+    
+    // Note: a good way to clear the input buffer is to define an end_byte
+    // '\n' should be sufficient for this usage
+    
+    // TODO: Verification
+    
+    // TODO: What if someone accidentally entered two bytes and pressed enter?
+    
+    /*switch(RX_finger_byte) {
+      case thumb_byte:
+        thumb_servo.write(angle(RX_angle_byte));
+        Serial.println("Thumb Moved");
+        break;
+      case index_byte:
+        index_servo.write(angle(RX_angle_byte));
+        Serial.println("Index Moved");
+        break;
+      case middle_byte:
+        middle_servo.write(angle(RX_angle_byte));
+        Serial.println("Middle Moved");
+        break;
+      case ring_byte:
+        ring_servo.write(angle(RX_angle_byte));
+        Serial.println("Ring Moved");
+        break;
+      case pinky_byte:
+        Pinky_Finger_Servo.write(angle(RX_angle_byte));
+        Serial.print("Pinky Moved ");
+        Serial.println(RX_angle_byte);
+        break;
+    }*/
+    
+    int idx = RX_finger_byte - '0'; // convert char to the int it represents
+    // '0'=thumb, '1'=index, ... , '4'=pinky
+    if(0<idx || idx>4) {
+      // TODO: handle error!
+      return;
+    }
+    
+    fingers_servo[idx].write(angle(RX_angle_byte));
+    Serial.print(FINGERS_NAME[idx]);
+    Serial.print(" moved ");
+    Serial.println(RX_angle_byte);
+    
+    // TODO: send success/failure message?
+    // alternative approach:
+    // send exit success here, failure in "TODO: handle error!"
+    
+  }
 }
 
-int Angle(int Byte) {
+/*int Angle(int Byte) {
   int Angle = map(Byte, 97, 122, 1, 179);
   return Angle;
-}
+}*/ // moved to top as #define, should reduce runtime resources cosumption
