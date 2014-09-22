@@ -9,15 +9,6 @@
 //
 // //
 
-/***********************************************************************************************
- * Changelog: 2014-09-22T23:45Z by Adrian Lam                                                  *
- * Attempted cleaning up and optimizations                                                     *
- * not sure whether they work though, so original codes in comments rather than removed        *
- * A copy of the updated known-to-work code is renamed Arduino_Hand.ino.old                    *
- * Previous known-to-work codes are also available on GitHub history                           *
- * Please test changes. If they work, feel free to removed commented codes                     *
- ***********************************************************************************************/
-
 #include <Servo.h>
 
 #define angle(Byte) map(Byte, 'a', 'z', 1, 179) // TODO: rename "Byte" to not use uppercase
