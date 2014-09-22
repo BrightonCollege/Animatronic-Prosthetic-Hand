@@ -20,12 +20,12 @@ Servo Pinky_Finger_Servo;
 
 
 // Communication Constants and Variables
-const int Start_Byte = 83; // "S"
-const int Thumb_Finger_Byte = 48; // "0"
-const int Index_Finger_Byte = 49; // "1"
-const int Middle_Finger_Byte = 50; // "2"
-const int Ring_Finger_Byte = 51; // "3"
-const int Pinky_Finger_Byte = 52; // "4"
+const int Start_Byte = 'S';
+const int Thumb_Finger_Byte = '0';
+const int Index_Finger_Byte = '1';
+const int Middle_Finger_Byte = '2';
+const int Ring_Finger_Byte = '3';
+const int Pinky_Finger_Byte = '4';
 const int Baud = 9600;
 int RX_Finger_Byte = 0;
 int RX_Angle_Byte = 0;
@@ -52,19 +52,10 @@ void setup() {
 
 void loop() {
   // Only run if there is data in the buffer
-  if (Serial.available() > 0) {
-    // Only run if there is a connection signal
-    if (Serial.read() == Start_Byte) {
-      Serial.println("Message Receved");
-      delay(500);
-      // Read
+  if (Serial.available() >= 3) {
+    
       RX_Finger_Byte = Serial.read();
-      delay(500);
       RX_Angle_Byte = Serial.read();
-      Serial.println(RX_Finger_Byte);
-      Serial.println(RX_Angle_Byte);
-      Serial.println("Angle Byte in Degrees:");
-      Serial.println(Angle(RX_Angle_Byte));
       // Verification
       // Selection
       if (RX_Finger_Byte == Thumb_Finger_Byte) {
@@ -88,7 +79,6 @@ void loop() {
         Serial.println("Pinky Moved");
       }
     }
-  }
 }
 
 int Angle(int Byte) {
