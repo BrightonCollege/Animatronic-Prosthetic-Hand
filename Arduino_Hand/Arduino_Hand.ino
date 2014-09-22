@@ -26,11 +26,6 @@ const char FINGERS_NAME[][7] = { "Thumb", "Index", "Middle", "Ring", "Pinky" };
 
 // Communication Constants and Variables
 const int START_BYTE  = 'S';
-/*const int THUMB_BYTE  = '0';
-const int INDEX_BYTE  = '1';
-const int MIDDLE_BYTE = '2';
-const int RING_BYTE   = '3';
-const int PINKY_BYTE  = '4';*/ // not necessary with current approach, but may keep if needed elsewhere
 const int BAUD        = 9600;
 /*int RX_Finger_Byte = 0;
 int RX_Angle_Byte = 0;*/ // moved to loop() as scope does not need to be global
