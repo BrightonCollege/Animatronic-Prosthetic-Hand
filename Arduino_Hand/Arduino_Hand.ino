@@ -32,11 +32,6 @@ const int BAUD        = 9600;
 void setup() {
   // Attach Servos
   // Remember they can only be attached on PWM pins, marked with a "~"
-  /*thumb_servo.attach(3);
-  index_servo.attach(5);
-  middle_servo.attach(6);
-  ring_servo.attach(10);
-  pinky_servo.attach(11);*/
   const int PINS[] = { 3, 5, 6, 10, 11 };
   int i;
   for(i=0; i<5; i++) {
