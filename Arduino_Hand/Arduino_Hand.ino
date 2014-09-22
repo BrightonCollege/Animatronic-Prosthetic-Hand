@@ -54,5 +54,13 @@ void loop() {
   finger_byte = Serial.read();
   angle_byte = Serial.read();
 
+  // Impliment an END_BYTE
+  
+  // TODO: Verification
+  // finger_byte range 48 - 52
+  // angle_byte range 97 - 122
+  
+  // TODO: What if someone accidentally entered two bytes and pressed enter?
+  
   }
 }
