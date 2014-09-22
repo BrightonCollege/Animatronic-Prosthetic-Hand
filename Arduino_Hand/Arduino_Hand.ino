@@ -17,11 +17,6 @@
  ****************************************************************/
 
 // Servo Setup
-/*Servo thumb_servo;
-Servo index_servo;
-Servo middle_servo;
-Servo ring_servo;
-Servo pinky_servo;*/
 Servo fingers_servo[5];
 
 const char FINGERS_NAME[][7] = { "Thumb", "Index", "Middle", "Ring", "Pinky" };
