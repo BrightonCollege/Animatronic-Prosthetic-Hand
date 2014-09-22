@@ -25,7 +25,6 @@ const char FINGERS_NAME[][7] = { "Thumb", "Index", "Middle", "Ring", "Pinky" };
 
 
 // Communication Constants and Variables
-/* consts renamed with UPPERCASE to conform to coding style */
 const int START_BYTE  = 'S';
 /*const int THUMB_BYTE  = '0';
 const int INDEX_BYTE  = '1';
