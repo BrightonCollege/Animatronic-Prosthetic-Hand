@@ -45,5 +45,14 @@ void setup() {
 void loop() {
   int finger_byte = 0;
   int angle_byte = 0;
+  
+  // Feel free to change this back, thought it was neater...
+  // Assumes the server knows what it's doing though
+  
+  while (Serial.read() != START_BYTE) {} // Wait for the start byte
+  while (Serial.available() < 2) {} // Wait for the buffer to fill
+  finger_byte = Serial.read();
+  angle_byte = Serial.read();
+
   }
 }
