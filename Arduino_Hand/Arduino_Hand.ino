@@ -44,8 +44,6 @@ void setup() {
 
 void loop() {
   int start_byte;
-  int RX_finger_byte = 0;
-  int RX_angle_byte = 0;
   /*************************************************************************
    * Question: any significance in using capitals for RX?                  *
    * If not, should change to lower case to conform to coding style.       *
@@ -108,5 +106,7 @@ void loop() {
     // alternative approach:
     // send exit success here, failure in "TODO: handle error!"
     
+  int finger_byte = 0;
+  int angle_byte = 0;
   }
 }
