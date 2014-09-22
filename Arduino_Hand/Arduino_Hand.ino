@@ -62,5 +62,20 @@ void loop() {
   
   // TODO: What if someone accidentally entered two bytes and pressed enter?
   
+  int idx = finger_byte - '0'; // convert char to the int it represents
+  // '0'=thumb, '1'=index, ... , '4'=pinky
+  if(0<idx || idx>4) {
+    // TODO: handle error!
+    return;
   }
+  
+  fingers_servo[idx].write(angle(angle_byte));
+  Serial.print(FINGERS_NAME[idx]);
+  Serial.print(" moved ");
+  Serial.println(angle_byte);
+  
+  // TODO: send success/failure message?
+  // alternative approach:
+  // send exit success here, failure in "TODO: handle error!"
+    
 }
