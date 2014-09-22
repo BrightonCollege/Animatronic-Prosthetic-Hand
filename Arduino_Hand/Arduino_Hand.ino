@@ -12,9 +12,6 @@
 #include <Servo.h>
 #define angle(Byte) map(Byte, 'a', 'z', 1, 179) // TODO: rename "Byte" to not use uppercase (is a reserved word)
 
-/****************************************************************
- * Question: Use byte or uint8_t datatypes instead of int?      *
- ****************************************************************/
 
 // Servo Setup
 Servo fingers_servo[5];
