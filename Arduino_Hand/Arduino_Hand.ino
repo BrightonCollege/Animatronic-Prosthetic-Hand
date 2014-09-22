@@ -21,7 +21,7 @@ const char FINGERS_NAME[][7] = { "Thumb", "Index", "Middle", "Ring", "Pinky" };
    if doesn't work, switch to String[].*/
 
 
-// Communication Constants and Variables
+// Communication Constants
 const int START_BYTE  = 'S';
 //const int END_BYTE = '\n';
 const int BAUD        = 9600;
