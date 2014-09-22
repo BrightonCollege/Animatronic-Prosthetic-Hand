@@ -36,21 +36,10 @@ void setup() {
   int i;
   for(i=0; i<5; i++) {
     fingers_servo[i].attach(PINS[i]);
+    fingers_servo[i].write(1);
   }
-  
   // Setup Bluetooth serial line
   Serial.begin(BAUD); // Baud = 9600 bps
-  
-  // Initalise Servo Positions
-  for(i=0; i<5; i++) {
-    fingers_servo[i].write(1);
-  } // Question: can this loop be merged to the previous loop?
-  
-  /*Thumb_Finger_Servo.write(1);
-  Index_Finger_Servo.write(1);
-  Middle_Finger_Servo.write(1);
-  Ring_Finger_Servo.write(1);
-  Pinky_Finger_Servo.write(1);*/
 }
 
 void loop() {
