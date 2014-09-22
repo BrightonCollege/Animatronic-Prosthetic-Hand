@@ -43,69 +43,6 @@ void setup() {
 }
 
 void loop() {
-  int start_byte;
-  /*************************************************************************
-   * Question: any significance in using capitals for RX?                  *
-   * If not, should change to lower case to conform to coding style.       *
-   *************************************************************************/
-  // Only run if there is data in the buffer
-  if (Serial.available() >= 3) {
-    start_byte = Serial.read();
-    RX_finger_byte = Serial.read();
-    RX_angle_byte = Serial.read();
-    
-    if(start_byte != START_BYTE) { // looks confusing, TODO: rename start_byte
-      // TODO: handle error!
-      return;
-    }
-    
-    // Note: a good way to clear the input buffer is to define an end_byte
-    // '\n' should be sufficient for this usage
-    
-    // TODO: Verification
-    
-    // TODO: What if someone accidentally entered two bytes and pressed enter?
-    
-    /*switch(RX_finger_byte) {
-      case thumb_byte:
-        thumb_servo.write(angle(RX_angle_byte));
-        Serial.println("Thumb Moved");
-        break;
-      case index_byte:
-        index_servo.write(angle(RX_angle_byte));
-        Serial.println("Index Moved");
-        break;
-      case middle_byte:
-        middle_servo.write(angle(RX_angle_byte));
-        Serial.println("Middle Moved");
-        break;
-      case ring_byte:
-        ring_servo.write(angle(RX_angle_byte));
-        Serial.println("Ring Moved");
-        break;
-      case pinky_byte:
-        Pinky_Finger_Servo.write(angle(RX_angle_byte));
-        Serial.print("Pinky Moved ");
-        Serial.println(RX_angle_byte);
-        break;
-    }*/
-    
-    int idx = RX_finger_byte - '0'; // convert char to the int it represents
-    // '0'=thumb, '1'=index, ... , '4'=pinky
-    if(0<idx || idx>4) {
-      // TODO: handle error!
-      return;
-    }
-    
-    fingers_servo[idx].write(angle(RX_angle_byte));
-    Serial.print(FINGERS_NAME[idx]);
-    Serial.print(" moved ");
-    Serial.println(RX_angle_byte);
-    
-    // TODO: send success/failure message?
-    // alternative approach:
-    // send exit success here, failure in "TODO: handle error!"
-    
   int finger_byte = 0;
   int angle_byte = 0;
   }
