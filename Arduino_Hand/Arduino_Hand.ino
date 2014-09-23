@@ -13,10 +13,10 @@
 #define angle(ch) map(ch, 'a', 'z', 1, 165) // Angle adjustment required
 
 #define DEBUG 1
-#define DEBUG_PRINT(msg) \
-    if(DEBUG) {          \
-      Serial.print("DEBUG: ");\
-      Serial.println(msg);\
+#define DEBUG_PRINT(msg)       \
+    if(DEBUG) {                \
+      Serial.print("DEBUG: "); \
+      Serial.println(msg);     \
     } else // consumes semicolon, not a bug
 
 // Servo Setup
@@ -50,9 +50,11 @@ void loop() {
   // Assumes the server knows what it's doing though
   
   while(Serial.read() != START_BYTE); // Wait for the start byte
-  Serial.readBytes((char*)&finger_byte, 1);
+  char input[3] = { 0, 0, 0 };
+  Serial.readBytes(input, 2);
+  finger_byte = input[0];
+  angle_byte = input[1];
   DEBUG_PRINT(finger_byte);
-  Serial.readBytes((char*)&angle_byte, 1);
   DEBUG_PRINT(angle_byte);
   
   int idx = finger_byte - '0'; // convert char to the int it represents
