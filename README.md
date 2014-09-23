@@ -1,37 +1,21 @@
-For Friday can you draw out some UI ideas, and feel free to get started on whatever you want, relevant documentation can be found throughout the GitHub.
-
 Animatronic-Prosthetic-Hand
 ===========================
 
-*A Brighton College Micro-electronic Engineering Society Project*
-
 A project using Arduino to control a robotic hand though a bluetooth connection with a mobile device.
 
-Components and Hardware:
--------------
+## Comunication Protocol ##
 
--   Servos *(In kits)*
--   Tubing *(Harry's ordering)*
--   Twine or String *(From science?)*
--   Plastics *(From DT?)*
+To send data to the arduino over bluetooth you send three bytes. They are all in ASCII.
 
-Software
--------------
+- `S`: This initates the connection between the Arduino and the phone.
+- `0 - 4`: This reprients the finger you want to control. `0` is the Thumb and `4` is the pinky.
+- `a - z`: This is the position you want the finger to be in. `a` is relaxed and `z` is tensed.
 
-Arduino Code
+## TODO ##
 
--   What interfaces between Arduino and Phone?
--   Bluetooth?
--   Midi?
-
-Phone Code
-
-iOS Code
-
-Android Code
-
-UI Elements
-
--   Buttons?
--   Gestures?
--   Gyro/Accl?
+- Create a dictionary with the commands for each gesture that the hand will make to ensure continuity accross platforms.
+- Deside on a UI design for both iOS and Android.
+- Begin development on the Apps
+- Fix issues with the Arduino code, allthough there is a working version for  testing.
+- Build hand
+- Impliment Bluetooth to the hardware
