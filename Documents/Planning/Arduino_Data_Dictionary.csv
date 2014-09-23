@@ -1,15 +1,8 @@
 Type,Variable or Function,Datatype,Default Value,Notes
-Const,Thumb_Finger,Integer,0,
-Const,First_Finger,Integer,1,
-Const,Middle_Finger,Integer,2,
-Const,Ring_Finger,Integer,3,
-Const,Pinky_Finger,Integer,4,
-Const,Thumb_Finger,Object,Servo,
-Const,First_Finger,Object,Servo,
-Const,Middle_Finger,Object,Servo,
-Const,Ring_Finger,Object,Servo,
-Const,Pinky_Finger,Object,Servo,
-Variable,FingerByte,Integer,0,Used to store the incoming finger data
-Variable,AngleByte,Integer,0,Used to store the incoming angle data
-Const,Baud,Integer,9600,Data transmission rate in b/s
-
+const,FINGERS_NAME,char,{ "Thumb", "Index", "Middle", "Ring", "Pinky" },Respective names for the int values of the fingers
+const,START_BYTE,char,'S',The byte receved to signal the start of the transmission
+const,END_BYTE,char,'\n',The byte receved to signal the end of the transmission
+const,BAUD,int,9600,The Baud rate in bps
+const,PINS,int,{ 3, 5, 6, 10, 11 },The pins which the servos are plugged into
+var,finger_byte,0,The byte receved after the START_BYTE, reprisents the finger to be moved
+car,angle_byte,0,The byte receved after the finger_byte, reprisents the angle of the servo, from a (0) to z (180)
