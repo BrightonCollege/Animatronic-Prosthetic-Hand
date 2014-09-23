@@ -10,9 +10,9 @@
 // //
 
 #include <Servo.h>
-#define angle(ch) map(ch, 'a', 'z', 1, 179) 
+#define angle(ch) map(ch, 'a', 'z', 1, 165) // Angle adjustment required
 
-#define DEBUG 0
+#define DEBUG 1
 #define DEBUG_PRINT(msg) \
     if(DEBUG) {          \
       Serial.print("DEBUG: ");\
@@ -61,6 +61,7 @@ void loop() {
   int idx = finger_byte - '0'; // convert char to the int it represents
   // '0'=thumb, '1'=index, ... , '4'=pinky
   // idx stored as int instead of byte because it may be negative
+  DEBUG_PRINT(idx)
   if(0 < idx || idx > 4) {
     // TODO: handle error: finger_byte out of range
     return;
@@ -73,8 +74,8 @@ void loop() {
   
   fingers_servo[idx].write(angle(angle_byte));
   Serial.print(FINGERS_NAME[idx]);
-  Serial.print(" moved ");
-  Serial.println(angle_byte);
+  Serial.print(" moved to ");
+  Serial.println(angle(angle_byte));
   
   // TODO: send success/failure message?
   // alternative approach:
