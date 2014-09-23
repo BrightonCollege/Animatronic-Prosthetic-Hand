@@ -1,7 +1,6 @@
 Type,Variable or Function,Datatype,Default Value,Notes
 const,FINGERS_NAME,char,Thumb Index Middle Ring Pinky,Respective names for the int values of the fingers
 const,START_BYTE,char,'S',The byte receved to signal the start of the transmission
-const,END_BYTE,char,'\n',The byte receved to signal the end of the transmission
 const,BAUD,int,9600,The Baud rate in bps
 const,PINS,int,3 5 6 10 11,The pins which the servos are plugged into
 var,finger_byte,int,0,The byte receved after the START_BYTE - reprisents the finger to be moved

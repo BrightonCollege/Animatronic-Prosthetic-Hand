@@ -49,17 +49,14 @@ void loop() {
   // Feel free to change this back, thought it was neater...
   // Assumes the server knows what it's doing though
   
-  while(Serial.read() != START_BYTE) ; // Wait for the start byte
-  while(Serial.available() < 2) ; // Wait for the buffer to fill
+  while(Serial.read() != START_BYTE); // Wait for the start byte
+  while(Serial.available() < 2); // Wait for the buffer to fill
   finger_byte = Serial.read();
+  DEBUG_PRINT(finger_byte);
   angle_byte = Serial.read();
+  DEBUG_PRINT(angle_byte);
 
-  // Implement an END_BYTE
-  //while(Serial.available() > 0 && Serial.read() != END_BYTE) ; // Consumes all input until END_BYTE
-  // NOTE: the above is what you would do if you are to implement END_BYTE
-  // However it may not be necessary, see issues for discussion
-
-  // TODO: What if someone accidentally entered two bytes and pressed enter?
+  // TODO: What if someone accidentally sent two bytes?
   
   int idx = finger_byte - '0'; // convert char to the int it represents
   // '0'=thumb, '1'=index, ... , '4'=pinky
