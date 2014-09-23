@@ -10,21 +10,24 @@
 // //
 
 #include <Servo.h>
-#define angle(Byte) map(Byte, 'a', 'z', 1, 179) // TODO: rename "Byte" to not use uppercase (is a reserved word)
+#define angle(ch) map(ch, 'a', 'z', 1, 179) 
 
+#define DEBUG 0
+#define DEBUG_PRINT(msg) \
+    if(DEBUG) {          \
+      Serial.print("DEBUG: ");\
+      Serial.println(msg);\
+    } else // consumes semicolon, not a bug
 
 // Servo Setup
 Servo fingers_servo[5];
 
 const char FINGERS_NAME[][7] = { "Thumb", "Index", "Middle", "Ring", "Pinky" };
-/* not sure if char[][] works but it should reduce resource consumption.
-   if doesn't work, switch to String[].*/
-
 
 // Communication Constants
-const int START_BYTE  = 'S';
-//const int END_BYTE = '\n';
-const int BAUD        = 9600;
+const byte START_BYTE  = 'S';
+//const byte END_BYTE    = '\n';
+const int BAUD         = 9600;
 
 void setup() {
   // Attach Servos
@@ -40,29 +43,34 @@ void setup() {
 }
 
 void loop() {
-  int finger_byte = 0;
-  int angle_byte = 0;
+  byte finger_byte = 0;
+  byte angle_byte = 0;
   
   // Feel free to change this back, thought it was neater...
   // Assumes the server knows what it's doing though
   
-  while (Serial.read() != START_BYTE) {} // Wait for the start byte
-  while (Serial.available() < 2) {} // Wait for the buffer to fill
+  while(Serial.read() != START_BYTE) ; // Wait for the start byte
+  while(Serial.available() < 2) ; // Wait for the buffer to fill
   finger_byte = Serial.read();
   angle_byte = Serial.read();
 
-  // Impliment an END_BYTE
-  
-  // TODO: Verification
-  // finger_byte range 48 - 52
-  // angle_byte range 97 - 122
-  
+  // Implement an END_BYTE
+  //while(Serial.available() > 0 && Serial.read() != END_BYTE) ; // Consumes all input until END_BYTE
+  // NOTE: the above is what you would do if you are to implement END_BYTE
+  // However it may not be necessary, see issues for discussion
+
   // TODO: What if someone accidentally entered two bytes and pressed enter?
   
   int idx = finger_byte - '0'; // convert char to the int it represents
   // '0'=thumb, '1'=index, ... , '4'=pinky
-  if(0<idx || idx>4) {
-    // TODO: handle error!
+  // idx stored as int instead of byte because it may be negative
+  if(0 < idx || idx > 4) {
+    // TODO: handle error: finger_byte out of range
+    return;
+  }
+
+  if(angle_byte < 'a' || angle_byte > 'z') {
+    // TODO: handle error: angle_byte out of range
     return;
   }
   
@@ -74,5 +82,5 @@ void loop() {
   // TODO: send success/failure message?
   // alternative approach:
   // send exit success here, failure in "TODO: handle error!"
-    
+
 }
