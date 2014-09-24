@@ -50,19 +50,11 @@ void loop() {
   // Assumes the server knows what it's doing though
   
   while(Serial.read() != START_BYTE); // Wait for the start byte
-
-  unsigned long start_time_ms = millis();
-  unsigned long input_timeout_ms = 1000;
-  
-  while(Serial.available() < 2) {
-    if(millis() - start_time_ms >= input_timeout_ms) {
-      // TODO: handle input timeout error
-      return;
-    }
-  }
-  finger_byte = Serial.read();
+  char input[3] = { 0, 0, 0 };
+  Serial.readBytes(input, 2);
+  finger_byte = input[0];
+  angle_byte = input[1];
   DEBUG_PRINT(finger_byte);
-  angle_byte = Serial.read();
   DEBUG_PRINT(angle_byte);
   
   int idx = finger_byte - '0'; // convert char to the int it represents
@@ -89,3 +81,4 @@ void loop() {
   // send exit success here, failure in "TODO: handle error!"
 
 }
+
