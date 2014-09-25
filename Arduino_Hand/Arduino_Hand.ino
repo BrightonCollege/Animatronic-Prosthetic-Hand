@@ -26,7 +26,6 @@ const char FINGERS_NAME[][7] = { "Thumb", "Index", "Middle", "Ring", "Pinky" };
 
 // Communication Constants
 const byte START_BYTE  = 'S';
-//const byte END_BYTE    = '\n';
 const int BAUD         = 9600;
 
 void setup() {
@@ -51,7 +50,10 @@ void loop() {
   
   while(Serial.read() != START_BYTE); // Wait for the start byte
   char input[3] = { 0, 0, 0 };
-  Serial.readBytes(input, 2);
+  if(Serial.readBytes(input, 2) < 2) {
+    // TODO: handle input timeout error
+    return;
+  }
   finger_byte = input[0];
   angle_byte = input[1];
   DEBUG_PRINT(finger_byte);
@@ -59,7 +61,7 @@ void loop() {
   
   int idx = finger_byte - '0'; // convert char to the int it represents
   // '0'=thumb, '1'=index, ... , '4'=pinky
-  // idx stored as int instead of byte because it may be negative
+
   DEBUG_PRINT(idx)
   if(0 < idx || idx > 4) {
     // TODO: handle error: finger_byte out of range
