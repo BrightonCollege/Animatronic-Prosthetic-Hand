@@ -51,8 +51,8 @@ void loop() {
   while(Serial.available() < 2) {
     if(millis() - start_time_ms >= input_timeout_ms) {
       // Timeout
-      DEBUG_PRINT("Timeout!")
-      Serial.write("t")
+      DEBUG_PRINT("Timeout!");
+      Serial.write("t");
       return;
     }
   }
@@ -74,18 +74,18 @@ void loop() {
 
   // '0'=thumb, '1'=index, ... , '4'=pinky
 
-  DEBUG_PRINT(idx)
+  DEBUG_PRINT(idx);
   if(0 < idx || idx > 4) {
     // Finger is out of range
-    DEBUG_PRINT("finger_byte out of range!")
-    Serial.write("f")
+    DEBUG_PRINT("finger_byte out of range!");
+    Serial.write("f");
     return;
   }
 
   if(angle_byte < 'a' || angle_byte > 'z') {
     // Angle is out of range
-    DEBUG_PRINT("angle_byte out of range!")
-    Serial.write("a")
+    DEBUG_PRINT("angle_byte out of range!");
+    Serial.write("a");
     return;
   }
   
