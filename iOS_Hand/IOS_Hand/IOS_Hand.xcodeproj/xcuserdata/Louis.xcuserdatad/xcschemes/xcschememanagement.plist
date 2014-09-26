@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Arduino_Hand.xcscheme</key>
+		<key>IOS_Hand.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>BFB6B4E819D5BD9A00F6A114</key>
+		<key>BFB6B51619D5C07200F6A114</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFB6B4FD19D5BD9A00F6A114</key>
+		<key>BFB6B52B19D5C07200F6A114</key>
 		<dict>
 			<key>primary</key>
 			<true/>

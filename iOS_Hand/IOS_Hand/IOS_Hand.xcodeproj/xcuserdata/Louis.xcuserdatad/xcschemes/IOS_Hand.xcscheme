@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFB6B4E819D5BD9A00F6A114"
-               BuildableName = "Arduino_Hand.app"
-               BlueprintName = "Arduino_Hand"
-               ReferencedContainer = "container:Arduino_Hand.xcodeproj">
+               BlueprintIdentifier = "BFB6B51619D5C07200F6A114"
+               BuildableName = "IOS_Hand.app"
+               BlueprintName = "IOS_Hand"
+               ReferencedContainer = "container:IOS_Hand.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFB6B4FD19D5BD9A00F6A114"
-               BuildableName = "Arduino_HandTests.xctest"
-               BlueprintName = "Arduino_HandTests"
-               ReferencedContainer = "container:Arduino_Hand.xcodeproj">
+               BlueprintIdentifier = "BFB6B52B19D5C07200F6A114"
+               BuildableName = "IOS_HandTests.xctest"
+               BlueprintName = "IOS_HandTests"
+               ReferencedContainer = "container:IOS_Hand.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFB6B4FD19D5BD9A00F6A114"
-               BuildableName = "Arduino_HandTests.xctest"
-               BlueprintName = "Arduino_HandTests"
-               ReferencedContainer = "container:Arduino_Hand.xcodeproj">
+               BlueprintIdentifier = "BFB6B52B19D5C07200F6A114"
+               BuildableName = "IOS_HandTests.xctest"
+               BlueprintName = "IOS_HandTests"
+               ReferencedContainer = "container:IOS_Hand.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFB6B4E819D5BD9A00F6A114"
-            BuildableName = "Arduino_Hand.app"
-            BlueprintName = "Arduino_Hand"
-            ReferencedContainer = "container:Arduino_Hand.xcodeproj">
+            BlueprintIdentifier = "BFB6B51619D5C07200F6A114"
+            BuildableName = "IOS_Hand.app"
+            BlueprintName = "IOS_Hand"
+            ReferencedContainer = "container:IOS_Hand.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFB6B4E819D5BD9A00F6A114"
-            BuildableName = "Arduino_Hand.app"
-            BlueprintName = "Arduino_Hand"
-            ReferencedContainer = "container:Arduino_Hand.xcodeproj">
+            BlueprintIdentifier = "BFB6B51619D5C07200F6A114"
+            BuildableName = "IOS_Hand.app"
+            BlueprintName = "IOS_Hand"
+            ReferencedContainer = "container:IOS_Hand.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFB6B4E819D5BD9A00F6A114"
-            BuildableName = "Arduino_Hand.app"
-            BlueprintName = "Arduino_Hand"
-            ReferencedContainer = "container:Arduino_Hand.xcodeproj">
+            BlueprintIdentifier = "BFB6B51619D5C07200F6A114"
+            BuildableName = "IOS_Hand.app"
+            BlueprintName = "IOS_Hand"
+            ReferencedContainer = "container:IOS_Hand.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

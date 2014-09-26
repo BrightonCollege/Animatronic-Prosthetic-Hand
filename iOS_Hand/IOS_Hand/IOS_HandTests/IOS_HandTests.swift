@@ -1,6 +1,6 @@
 //
-//  Arduino_HandTests.swift
-//  Arduino_HandTests
+//  IOS_HandTests.swift
+//  IOS_HandTests
 //
 //  Created by Louis de Wardt on 26/09/2014.
 //  Copyright (c) 2014 Brighton College. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class Arduino_HandTests: XCTestCase {
+class IOS_HandTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

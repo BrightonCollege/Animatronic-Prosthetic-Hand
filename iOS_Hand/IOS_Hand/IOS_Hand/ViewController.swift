@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Arduino_Hand
+//  IOS_Hand
 //
 //  Created by Louis de Wardt on 26/09/2014.
 //  Copyright (c) 2014 Brighton College. All rights reserved.
