@@ -1,0 +1,4 @@
+Error Code,Type,Descripton
+t,Timeout Error,Data wasn't sent quick enough.
+f,Range Error,finger_byte not in range '0' to '4'
+a,Range Error,angle_byte not in range 'a' to 'z'
