@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EA4DDBF4-DE36-4B46-944C-66E31AC13876</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Arduino_Hand</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0AFA6EA7F7391E363300EA219BD4D2F3C243D35E</key>
+		<string>https://github.com/brightoncollege/Animatronic-Prosthetic-Hand.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS_Hand/Arduino_Hand/Arduino_Hand.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0AFA6EA7F7391E363300EA219BD4D2F3C243D35E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brightoncollege/Animatronic-Prosthetic-Hand.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0AFA6EA7F7391E363300EA219BD4D2F3C243D35E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0AFA6EA7F7391E363300EA219BD4D2F3C243D35E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Animatronic-Prosthetic-Hand</string>
+		</dict>
+	</array>
+</dict>
+</plist>
