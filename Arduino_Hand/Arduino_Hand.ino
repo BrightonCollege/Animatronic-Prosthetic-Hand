@@ -44,6 +44,7 @@ void loop() {
   byte angle_byte = 0;
   
   while(Serial.read() != START_BYTE); // Wait for the start byte
+<<<<<<< HEAD
 
   unsigned long start_time_ms = millis();
   unsigned long input_timeout_ms = 1000;
@@ -58,11 +59,24 @@ void loop() {
   }
   
   finger_byte = Serial.read();
+=======
+  char input[3] = { 0, 0, 0 };
+  if(Serial.readBytes(input, 2) < 2) {
+    // TODO: handle input timeout error
+    return;
+  }
+  finger_byte = input[0];
+  angle_byte = input[1];
+>>>>>>> FETCH_HEAD
   DEBUG_PRINT(finger_byte);
-  angle_byte = Serial.read();
   DEBUG_PRINT(angle_byte);
   
   int idx = finger_byte - '0'; // convert char to the int it represents
+<<<<<<< HEAD
+=======
+  // '0'=thumb, '1'=index, ... , '4'=pinky
+
+>>>>>>> FETCH_HEAD
   DEBUG_PRINT(idx)
   if(0 < idx || idx > 4) {
     // Finger is out of range
@@ -83,3 +97,4 @@ void loop() {
   Serial.print(" moved to ");
   Serial.println(angle(angle_byte));
 }
+
