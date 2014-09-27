@@ -11,9 +11,13 @@ To send data to the arduino over bluetooth you send three bytes. They are all in
 - `0 - 4`: This reprients the finger you want to control. `0` is the Thumb and `4` is the pinky.
 - `a - z`: This is the position you want the finger to be in. `a` is relaxed and `z` is tensed.
 
-## TODO ##
+## Todo List ##
 
 - Create a dictionary with the commands for each gesture that the hand will make to ensure continuity accross platforms.
-- Begin development on the Apps
 - Build hand
-- Impliment Bluetooth to the hardware
+
+Bluetooth
+---------
+Order bluetooth arduino thing.
+Begin bluetooth code on apps.
+Make secure bluetooth connection to prevent DDoSSing.
