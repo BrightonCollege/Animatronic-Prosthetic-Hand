@@ -14,8 +14,6 @@ To send data to the arduino over bluetooth you send three bytes. They are all in
 ## TODO ##
 
 - Create a dictionary with the commands for each gesture that the hand will make to ensure continuity accross platforms.
-- Deside on a UI design for both iOS and Android.
 - Begin development on the Apps
-- Fix issues with the Arduino code, allthough there is a working version for  testing.
 - Build hand
 - Impliment Bluetooth to the hardware
