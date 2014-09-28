@@ -18,6 +18,6 @@ To send data to the arduino over bluetooth you send three bytes. They are all in
 
 Bluetooth
 ---------
-Order bluetooth arduino thing.
-Begin bluetooth code on apps.
-Make secure bluetooth connection to prevent DDoSSing.
+- Order bluetooth arduino thing.
+- Begin bluetooth code on apps.
+- Make secure bluetooth connection to prevent DDoSSing.
