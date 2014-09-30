@@ -24,6 +24,6 @@ Bluetooth
 Bluetooth Todo List for apps:
 -----------------------------
 - Make stable connection between device and arduino.
-- Send a hexacode digit to the arduino and make sure it recieves.
-- Adapt UI to send the hexacode digits precisely and efficiently.
+- Send a ASCII byte to the arduino and make sure it recieves.
+- Adapt UI to send the ASCII byte precisely and efficiently.
 - Make sure the connection is private (Stop DDoSSing)
