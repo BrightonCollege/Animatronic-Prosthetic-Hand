@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C08136519D9BC770039E99B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C08136419D9BC770039E99B /* logo.png */; };
+		2C08136719D9BF790039E99B /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C08136619D9BF790039E99B /* white.jpg */; };
+		2C90F2CE19DC5C6B00E3C1C1 /* stock-footage-blue-circuit-board-hi-tech-computer-generated-seamless-loop-motion-background-hd-p.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C90F2CD19DC5C6B00E3C1C1 /* stock-footage-blue-circuit-board-hi-tech-computer-generated-seamless-loop-motion-background-hd-p.jpg */; };
+		2C90F2D019DC616100E3C1C1 /* circuit-board-211.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C90F2CF19DC616100E3C1C1 /* circuit-board-211.jpg */; };
+		2C90F2D419DC7F6400E3C1C1 /* GCRANK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 2C90F2D319DC7F6400E3C1C1 /* GCRANK.TTF */; };
+		2CA3B7C219DC823B00BCD66D /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3B7C119DC823B00BCD66D /* Starjedi.ttf */; };
+		2CA3B7C419DC825C00BCD66D /* space age.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3B7C319DC825C00BCD66D /* space age.ttf */; };
 		BFB6B51D19D5C07200F6A114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6B51C19D5C07200F6A114 /* AppDelegate.swift */; };
 		BFB6B51F19D5C07200F6A114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6B51E19D5C07200F6A114 /* ViewController.swift */; };
 		BFB6B52219D5C07200F6A114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB6B52019D5C07200F6A114 /* Main.storyboard */; };
@@ -26,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C08136419D9BC770039E99B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = IOS_Hand/logo.png; sourceTree = "<group>"; };
+		2C08136619D9BF790039E99B /* white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = white.jpg; path = IOS_Hand/white.jpg; sourceTree = "<group>"; };
+		2C90F2CD19DC5C6B00E3C1C1 /* stock-footage-blue-circuit-board-hi-tech-computer-generated-seamless-loop-motion-background-hd-p.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stock-footage-blue-circuit-board-hi-tech-computer-generated-seamless-loop-motion-background-hd-p.jpg"; sourceTree = "<group>"; };
+		2C90F2CF19DC616100E3C1C1 /* circuit-board-211.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "circuit-board-211.jpg"; path = "IOS_Hand/circuit-board-211.jpg"; sourceTree = "<group>"; };
+		2C90F2D319DC7F6400E3C1C1 /* GCRANK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCRANK.TTF; sourceTree = "<group>"; };
+		2CA3B7C119DC823B00BCD66D /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		2CA3B7C319DC825C00BCD66D /* space age.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "space age.ttf"; sourceTree = "<group>"; };
 		BFB6B51719D5C07200F6A114 /* IOS_Hand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Hand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB6B51B19D5C07200F6A114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB6B51C19D5C07200F6A114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +73,13 @@
 		BFB6B50E19D5C07200F6A114 = {
 			isa = PBXGroup;
 			children = (
+				2C90F2D319DC7F6400E3C1C1 /* GCRANK.TTF */,
+				2CA3B7C119DC823B00BCD66D /* Starjedi.ttf */,
+				2CA3B7C319DC825C00BCD66D /* space age.ttf */,
+				2C90F2CD19DC5C6B00E3C1C1 /* stock-footage-blue-circuit-board-hi-tech-computer-generated-seamless-loop-motion-background-hd-p.jpg */,
+				2C90F2CF19DC616100E3C1C1 /* circuit-board-211.jpg */,
+				2C08136419D9BC770039E99B /* logo.png */,
+				2C08136619D9BF790039E99B /* white.jpg */,
 				BFB6B51919D5C07200F6A114 /* IOS_Hand */,
 				BFB6B52F19D5C07200F6A114 /* IOS_HandTests */,
 				BFB6B51819D5C07200F6A114 /* Products */,
@@ -192,9 +213,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C90F2D019DC616100E3C1C1 /* circuit-board-211.jpg in Resources */,
+				2C90F2CE19DC5C6B00E3C1C1 /* stock-footage-blue-circuit-board-hi-tech-computer-generated-seamless-loop-motion-background-hd-p.jpg in Resources */,
+				2CA3B7C419DC825C00BCD66D /* space age.ttf in Resources */,
 				BFB6B52219D5C07200F6A114 /* Main.storyboard in Resources */,
+				2C08136519D9BC770039E99B /* logo.png in Resources */,
+				2CA3B7C219DC823B00BCD66D /* Starjedi.ttf in Resources */,
+				2C90F2D419DC7F6400E3C1C1 /* GCRANK.TTF in Resources */,
 				BFB6B52719D5C07200F6A114 /* LaunchScreen.xib in Resources */,
 				BFB6B52419D5C07200F6A114 /* Images.xcassets in Resources */,
+				2C08136719D9BF790039E99B /* white.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +433,7 @@
 				BFB6B53819D5C07200F6A114 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFB6B53919D5C07200F6A114 /* Build configuration list for PBXNativeTarget "IOS_HandTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +442,7 @@
 				BFB6B53B19D5C07200F6A114 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
