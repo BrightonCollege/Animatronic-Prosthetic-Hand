@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C08136319D990220039E99B /* 656_3518528.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C08136219D990220039E99B /* 656_3518528.jpg */; };
+		2C08136519D9BC770039E99B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C08136419D9BC770039E99B /* logo.png */; };
+		2C08136719D9BF790039E99B /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C08136619D9BF790039E99B /* white.jpg */; };
 		BFB6B51D19D5C07200F6A114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6B51C19D5C07200F6A114 /* AppDelegate.swift */; };
 		BFB6B51F19D5C07200F6A114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6B51E19D5C07200F6A114 /* ViewController.swift */; };
 		BFB6B52219D5C07200F6A114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB6B52019D5C07200F6A114 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C08136219D990220039E99B /* 656_3518528.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 656_3518528.jpg; sourceTree = "<group>"; };
+		2C08136419D9BC770039E99B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		2C08136619D9BF790039E99B /* white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white.jpg; sourceTree = "<group>"; };
 		BFB6B51719D5C07200F6A114 /* IOS_Hand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Hand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB6B51B19D5C07200F6A114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB6B51C19D5C07200F6A114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 				BFB6B52019D5C07200F6A114 /* Main.storyboard */,
 				BFB6B52319D5C07200F6A114 /* Images.xcassets */,
 				BFB6B52519D5C07200F6A114 /* LaunchScreen.xib */,
+				2C08136619D9BF790039E99B /* white.jpg */,
+				2C08136219D990220039E99B /* 656_3518528.jpg */,
+				2C08136419D9BC770039E99B /* logo.png */,
 				BFB6B51A19D5C07200F6A114 /* Supporting Files */,
 			);
 			path = IOS_Hand;
@@ -193,8 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB6B52219D5C07200F6A114 /* Main.storyboard in Resources */,
+				2C08136519D9BC770039E99B /* logo.png in Resources */,
 				BFB6B52719D5C07200F6A114 /* LaunchScreen.xib in Resources */,
+				2C08136319D990220039E99B /* 656_3518528.jpg in Resources */,
 				BFB6B52419D5C07200F6A114 /* Images.xcassets in Resources */,
+				2C08136719D9BF790039E99B /* white.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				BFB6B53819D5C07200F6A114 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFB6B53919D5C07200F6A114 /* Build configuration list for PBXNativeTarget "IOS_HandTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				BFB6B53B19D5C07200F6A114 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
