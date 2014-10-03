@@ -25,24 +25,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wJ-k1-45G">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="more" id="TYd-xg-cP0"/>
+                                    <tabBarItem systemItem="downloads" id="S1i-5B-rcb"/>
+                                    <tabBarItem systemItem="more" id="eAN-QJ-2iD"/>
+                                </items>
+                            </tabBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-aN-0Ko">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Animatronic Prosthetic Hand" id="r08-No-CgL"/>
                                 </items>
                             </navigationBar>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wJ-k1-45G">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="TYd-xg-cP0"/>
-                                    <tabBarItem systemItem="downloads" id="S1i-5B-rcb"/>
-                                    <tabBarItem systemItem="more" id="eAN-QJ-2iD"/>
-                                </items>
-                            </tabBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_Background_B.png" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-sT-aVd">
+                                <rect key="frame" x="64" y="263" width="240" height="240"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ECG-gb-X80">
+                                <rect key="frame" x="80" y="279" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-ik-264">
+                                <rect key="frame" x="188" y="279" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-vr-RwZ">
+                                <rect key="frame" x="188" y="387" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="02D-rL-d2K">
+                                <rect key="frame" x="80" y="387" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="bNw-li-Ii7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,6 +66,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Panel_Background.png" width="240" height="240"/>
+        <image name="Panel_Background_B.png" width="240" height="240"/>
         <image name="circuit-board-211.jpg" width="1200" height="1920"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
