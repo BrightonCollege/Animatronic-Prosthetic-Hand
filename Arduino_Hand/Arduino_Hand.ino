@@ -71,15 +71,9 @@ void loop() {
   
   int idx = (int)finger_byte - 48;//'0'; // convert char to the int it represents
 
-  if(0 < idx ){//|| idx > 4) {
+  if(idx < 0 || idx > 4) {
     // Finger is out of range
-    bluetooth.println("condition 0<idx failed");
-    bluetooth.println(idx); // Write error message
-    return;
-  }
-  if(idx > 4) {
-    bluetooth.println("connection idx>4 failed");
-    bluetooth.println(idx);
+    bluetooth.write("f"); // Write error message
     return;
   }
 
