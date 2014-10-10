@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		2C08136419D9BC770039E99B /* BCElogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BCElogo.png; path = IOS_Hand/BCElogo.png; sourceTree = "<group>"; };
 		2C90F2CF19DC616100E3C1C1 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = IOS_Hand/background.jpg; sourceTree = "<group>"; };
+		2CD7ED3819E833AE00CD5551 /* functions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = functions.playground; sourceTree = "<group>"; };
 		5ACE5AE819DEDA1900C9FDF2 /* Panel_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Panel_Icon.png; path = IOS_Hand/Panel_Icon.png; sourceTree = "<group>"; };
 		5ACE5AEA19DEDCA100C9FDF2 /* Panel_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Panel_Background.png; path = IOS_Hand/Panel_Background.png; sourceTree = "<group>"; };
 		BFB6B51719D5C07200F6A114 /* IOS_Hand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Hand.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +93,7 @@
 				BFB6B51C19D5C07200F6A114 /* AppDelegate.swift */,
 				BFB6B51E19D5C07200F6A114 /* ViewController.swift */,
 				BFB6B52019D5C07200F6A114 /* Main.storyboard */,
+				2CD7ED3819E833AE00CD5551 /* functions.playground */,
 				BFB6B52319D5C07200F6A114 /* Images.xcassets */,
 				BFB6B52519D5C07200F6A114 /* LaunchScreen.xib */,
 				BFB6B51A19D5C07200F6A114 /* Supporting Files */,
