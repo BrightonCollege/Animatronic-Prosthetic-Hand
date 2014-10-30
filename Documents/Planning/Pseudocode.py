@@ -32,3 +32,5 @@ def initPosition():
     changePosition(Middle_Finger, 0)
     changePosition(Ring_Finger, 0)
     changePosition(Pinky_Finger, 0)
+
+#COMMENT YOUR CODE PEOPLE WHAT KIND OF PROGRAMMERS ARE YOU? - geez

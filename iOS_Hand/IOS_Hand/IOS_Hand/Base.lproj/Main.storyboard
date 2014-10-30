@@ -156,8 +156,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="L0g-er-EPV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is a club for people who like to go over people's hard work and change it - for no reason.  " translatesAutoresizingMaskIntoConstraints="NO" id="CHk-iw-tyo">
-                                <rect key="frame" x="48" y="223" width="241" height="121"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CHk-iw-tyo">
+                                <rect key="frame" x="40" y="192" width="241" height="182.5"/>
+                                <string key="text">This is a club for people who like to go over people's hard work and change it - for no reason. Except maybe sheer jealously at others God given ability to deisgn.  </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -193,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9z-88-ydG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-360" y="90"/>
+            <point key="canvasLocation" x="-698" y="-551"/>
         </scene>
     </scenes>
     <resources>
