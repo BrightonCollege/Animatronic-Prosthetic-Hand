@@ -1,16 +1,18 @@
-// Playground - noun: a place where people can play
+// swift code for original hand fucntions
 
 import UIKit
 
-//
-func changePostition(Finger: angle)
+//fuction which connects to bluetooth to change finger position
+func changePostition(Finger: Angle)
 {
     bluetoothSend(Channel)
     bluetoothSend(Finger)
     bluetoothSend(Angle)
 }
 
-func doGesture(gesture){
+//fuction which enables user to interact playing game 'rock, paper, scissors'
+func doGesture(Gesture)
+{
     Gesture = Gesture.lowercaseString
     
     if Gesture == "rock"
@@ -40,6 +42,16 @@ func doGesture(gesture){
         changePostition(Pinky_Finger, 180)
     }
     
+}
+
+//fuction which returns hand to inital position
+func initPosition()
+{
+    changePostition(Thumb_Finger, 0)
+    changePostition(First_finger, 0)
+    changePostition(Middle_Finger, 0)
+    changePostition(Ring_Finger, 0)
+    changePostition(Pinky_Finger, 0)
 }
 
 
