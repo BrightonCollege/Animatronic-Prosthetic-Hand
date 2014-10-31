@@ -69,9 +69,9 @@ void loop() {
   finger_byte = input[0];
   angle_byte = input[1];
   
-  int idx = finger_byte - '0'; // convert char to the int it represents
+  int idx = (int)finger_byte - 48;//'0'; // convert char to the int it represents
 
-  if(0 < idx || idx > 4) {
+  if(idx < 0 || idx > 4) {
     // Finger is out of range
     bluetooth.write("f"); // Write error message
     return;
