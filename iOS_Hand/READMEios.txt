@@ -1,1 +1,0 @@
-This is where iOS source, builds and documentation will go.
