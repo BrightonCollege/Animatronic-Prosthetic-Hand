@@ -19,18 +19,16 @@ except ImportError:
 from platform import system
 System = system()
 class PlatformError(Exception):
-    def __init__(self, value):
-        self.value = value
-    def __str__(self):
-        return repr(self.value)
+    def __init__(self, platform): self.platform = platform
+    def __str__(self): return repr(self.platform + " is not supported.")
 if System == "Linux":
     # Assumes you've binded the device to /dev/rfcomm4
     serialConnection = serial.Serial("/dev/rfcomm4", 115600, timeout=1)
 if System == "Darwin":
     #serialConnection = serial.Serial("/dev/tty.---", 115600, timeout=1)
-    raise PlatormError("Darwin is not currently supported")
+    raise PlatformError("Darwin")
 else:
-    raise PlatformError("You're OS is not supported.")
+    raise PlatformError("Unknown")
 
 # Set Baud to 9600
 serialConnection.write("$$$")
