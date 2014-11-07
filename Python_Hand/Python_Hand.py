@@ -16,19 +16,20 @@ except ImportError:
     system("sudo python setup.py install")
     import serial
 
-from platform import system
-System = system()
+import platform
+from os import system
+System = platform.system()
 class PlatformError(Exception):
     def __init__(self, platform): self.platform = platform
     def __str__(self): return repr(self.platform + " is not supported.")
 if System == "Linux":
-    # Assumes you've binded the device to /dev/rfcomm4
+    system("bash ")
     serialConnection = serial.Serial("/dev/rfcomm4", 115600, timeout=1)
 if System == "Darwin":
     #serialConnection = serial.Serial("/dev/tty.---", 115600, timeout=1)
-    raise PlatformError("Darwin")
+    raise PlatformError(System)
 else:
-    raise PlatformError("Unknown")
+    raise PlatformError("Unknown System: " + System)
 
 # Set Baud to 9600
 serialConnection.write("$$$")
@@ -47,13 +48,16 @@ gestureShake   = ['m','m','m','m','m']
 gestureRocker  = ['z','a','z','z','a']
 
 def writeGesture(Gesture):
-    serialConnection.write(b"S0%s" % (Gesture[0]))
-    serialConnection.write(b"S1%s" % (Gesture[1]))
-    serialConnection.write(b"S2%s" % (Gesture[2]))
-    serialConnection.write(b"S3%s" % (Gesture[3]))
-    serialConnection.write(b"S4%s" % (Gesture[4]))
+    for finger in range(0,4):
+        serialConnection.write(b"S%i%s" % (Finger, Gesture[Finger]))
     
 def writeFinger(Finger, Angle):
     if type(Angle) is int:
         Angle = chr(map(Angle, 0, 180, ord(b"a"), ord(b"z")))
+    if type(Angle) is str:
+        Angle = Angle.lower()
     serialConnection.write(b"S%i%s" % (Finger, Angle))
+    
+if __name__ == '__main__':
+    ## run
+    pass
