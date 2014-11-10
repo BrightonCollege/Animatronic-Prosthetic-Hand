@@ -1,0 +1,21 @@
+------------ [list]
+NAME
+    list --list loaded elements in the program
+SYNOPSIS
+    list [type] [options]
+DESCRIPTION
+    The list utility can list types of objects loaded in the program.
+    You can use this information to see what data you can send to the hand.
+    By default the list utility will print each object's name on a newline.
+    The following options are available:
+    -d      Give detailed output about the object
+
+------------ [send]
+NAME
+    send --send a gesture or value to a connected hand
+SYNOPSIS
+    send {gesture, finger} [value]
+DESCRIPTION
+    send uses the software to send gestures or values to the connected hand.
+    the [value] can be of type int or of type chr for `finger`
+    the [value] must be from `list gestures` for a gesture
