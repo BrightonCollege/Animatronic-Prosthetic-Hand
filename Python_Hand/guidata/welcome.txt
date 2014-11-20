@@ -1,6 +1,0 @@
-:: Brighton College Engineering Society ::
-:: Animatronic Prosthetic Hand          ::
-http://www.github.com/brightoncollege/animatronic-prosthetic-hand
-
---help for help
---quit or Ctrl-C to quit
